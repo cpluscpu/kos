@@ -5,7 +5,7 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = ""
+local bot_api_key = "162560326:AAGZbgILwdUHt1nDgCMYmqsHlnY6h_aRE8Q"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[HI
@@ -55,7 +55,7 @@ _just send a photo_
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {}-- put your id here
+  local admins = {188548712}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -205,7 +205,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nbased on linux-file-manager :D\nthx to @imandaneshi\neditor: @unfriendly"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nCRUEL BOT   M.KH"
 
 	print(bot_info)
 
@@ -261,6 +261,10 @@ function msg_processor(msg)
 	local text = '_'..matches[1]..'_'
 	sendMessage(msg.chat.id, text, true, false, true)
 
+elseif msg.text:("^/id") then
+	local text = 'ID : '..msg.from.id..'\nName : '..msg.from.print_name..'\nGruep ID : '..msg.to.id
+	sendMessage(msg.chat.id, text, true, false, true)
+
  elseif msg.text:match("^/italicch (.*) (.*)") then
 	local matches = { string.match(msg.text, "^/italicch (.*) (.*)") }
 	local text = '_'..matches[2]..'_'
@@ -281,6 +285,11 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  elseif msg.text:match("^/code (.*)") then
  local matches = { string.match(msg.text, "^/code (.*)") }
  local text = '`'..matches[1]..'`'
+ sendMessage(msg.chat.id, text, true, false, true)
+ 
+ elseif msg.text:match("^سلام") then
+ local matches = { string.match(msg.text, "^سلام") }
+ local text = '`'سلام'`'
  sendMessage(msg.chat.id, text, true, false, true)
 
  elseif msg.text:match("^/codech (.*) (.*)") then
