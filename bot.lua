@@ -261,9 +261,7 @@ function msg_processor(msg)
 	local text = '_'..matches[1]..'_'
 	sendMessage(msg.chat.id, text, true, false, true)
 
-elseif msg.text:("^/id") then
-	local text = 'ID : '..msg.from.id..'\nName : '..msg.from.print_name..'\nGruep ID : '..msg.to.id
-	sendMessage(msg.chat.id, text, true, false, true)
+
 
  elseif msg.text:match("^/italicch (.*) (.*)") then
 	local matches = { string.match(msg.text, "^/italicch (.*) (.*)") }
