@@ -46,7 +46,7 @@ _just send a sticker_
 *photo to sticker*
 _just send a photo_
 
-[Source](https://github.com/pAyDaAr/lua-api-bot) ;-)
+M.KH
 ]] 
 
 -------
@@ -285,11 +285,12 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local text = '`'..matches[1]..'`'
  sendMessage(msg.chat.id, text, true, false, true)
  
- elseif msg.text:match("^سلام") then
- local matches = { string.match(msg.text, "^سلام") }
- local text = '`'سلام'`'
+  elseif msg.text:match("^بگو (.*)") then
+ local matches = { string.match(msg.text, "^بگو (.*)") }
+ local text = '`'..matches[1]..'`'
  sendMessage(msg.chat.id, text, true, false, true)
-
+ 
+ 
  elseif msg.text:match("^/codech (.*) (.*)") then
  local matches = { string.match(msg.text, "^/codech (.*) (.*)") }
  local text = '`'..matches[2]..'`'
