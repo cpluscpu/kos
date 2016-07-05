@@ -46,9 +46,9 @@ _just send a sticker_
 *photo to sticker*
 _just send a photo_
 
-🔥Fire Bot🔥 Helper
+dimon Helper
 
-@parsaalemi
+@dimon_team
 ]] 
 
 -------
@@ -57,7 +57,7 @@ _just send a photo_
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {105831687,235060654}-- put your id here
+  local admins = {228407123}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
